@@ -5,6 +5,7 @@ var handlebars = require('handlebars');
 var passport = require('passport');
 var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 
+const NODE_APP_PORT = 8080;
 const TWITCH_CLIENT_ID = process.env.TWITCH_CLIENT_ID;
 const TWITCH_SECRET = process.env.TWITCH_SECRET;
 const SESSION_SECRET = process.env.SESSION_SECRET;
@@ -88,6 +89,6 @@ app.get('/', function (req, res) {
   }
 });
 
-app.listen(3000, function () {
-  console.log('Twitch Bot auth listening on port 3000!');
+app.listen(NODE_APP_PORT, function () {
+  console.log('Twitch Bot auth listening on port' + NODE_APP_PORT);
 });
