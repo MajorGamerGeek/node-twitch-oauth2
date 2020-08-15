@@ -1,0 +1,19 @@
+{
+  "name": "node-twitch-oauth2",
+  "version": "0.9.0",
+  "description": "Twitch OAuth2 Authentication",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "handlebars": "^4.0.6",
+    "node-fetch": "^2.6.0",
+    "passport": "^0.3.2",
+    "passport-oauth": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "MajorGamerGeek",
+  "license": "Apache-2.0"
+}
