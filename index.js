@@ -69,7 +69,7 @@ passport.use('twitch', new OAuth2Strategy({
 ));
 
 // Set route to start OAuth link with scope
-app.get('/auth/twitch', passport.authenticate('twitch', { scope: 'channel:moderate' }));
+app.get('/auth/twitch', passport.authenticate('twitch', { scope: 'channel:read:redemptions' }));
 
 // Set route for OAuth redirect
 app.get('/auth/twitch/callback', passport.authenticate('twitch', { successRedirect: '/', failureRedirect: '/' }));
@@ -90,5 +90,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(NODE_APP_PORT, function () {
-  console.log('Twitch Bot auth listening on port' + NODE_APP_PORT);
+  console.log('Twitch Bot auth listening on port ' + NODE_APP_PORT);
 });
